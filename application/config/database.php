@@ -48,7 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'mysql.idhostinger.com';
+$db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'u469290389_ppjk';
 $db['default']['password'] = 'k3r3w3d4n';
 $db['default']['database'] = 'u469290389_ppjk';
