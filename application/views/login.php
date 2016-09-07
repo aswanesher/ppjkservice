@@ -44,7 +44,7 @@
 							<div class="center">
 								<h1>
 									<i class="ace-icon fa fa-dashboard green"></i>
-									<span class="red">Panel Admin</span>
+									<span class="red">Member Area</span>
 								</h1>
 								<h4 class="blue" id="id-company-text">&copy; <?php echo $company;?></h4>
 							</div>
@@ -58,7 +58,7 @@
 
 											<h4 class="header blue lighter bigger">
 												<i class="ace-icon fa fa-lock green"></i>
-												Silahkan login ke panel admin
+												Silahkan login ke Member Area
 											</h4>
 
 											<div class="space-6"></div>
