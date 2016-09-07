@@ -18,7 +18,7 @@ if(!empty($slider_widget)) {
 			<div class="col-lg-4 hidden-md hidden-sm hidden-xs">
 				<div class="img-cap-effect">
 					<div class="img-box">
-						<img src="images/about-info-box/2.jpg" alt="Awesome Image"/>
+						<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/about-info-box/2.jpg" alt="Awesome Image"/>
 						<div class="img-caption">
 							<div class="box-holder"></div>
 						</div>
@@ -46,13 +46,49 @@ if(!empty($slider_widget)) {
 
 <!-- WIDGET BLOG -->
 <?php 
-if(!empty($blog_widget)) {
+/*if(!empty($blog_widget)) {
     $this->load->view($temp.'widget/produk_widget');
-} 
+} */
 ?>
+<section class="welcome-services home-one">
+	<div class="thm-container">
+		<div class="sec-title">
+			<h2><span>Our Featured Services</span></h2>
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Consect petur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/welcome-services/2.png" alt="">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>ocean Fright</h3>
+							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eure fugiat nulla pariatur.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/welcome-services/1.png" alt="">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>Air Fright</h3>
+							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eure fugiat nulla pariatur.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <!-- END WIDGET BLOG --> 
 
-<section class="featured-services style-two">
+<!--<section class="featured-services style-two">
 	<div class="thm-container">
 		<div class="row">
 			<div class="col-lg-8 col-md-12 featured-service-box pull-right">
@@ -124,11 +160,11 @@ if(!empty($blog_widget)) {
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
 
 
 
-<!--<section class="faq-section sec-padding">
+<section class="faq-section sec-padding">
 	<div class="thm-container">
 		<div class="row">
 			<div class="col-lg-8 col-md-8">
@@ -210,7 +246,7 @@ if(!empty($blog_widget)) {
 			</div>
 		</div>
 	</div>
-</section>-->
+</section>
 
 
 
@@ -517,7 +553,7 @@ if(!empty($delivery_widget)) {
 <!-- END WIDGET DELIVERY -->
 
 
-<!--<section class="footer-top">
+<section class="footer-top">
 	<div class="thm-container">
 		<div class="row">
 			<div class="col-md-12">
@@ -531,6 +567,6 @@ if(!empty($delivery_widget)) {
 			</div>
 		</div>
 	</div>
-</section>-->
+</section>
 
 
