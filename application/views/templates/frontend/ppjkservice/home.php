@@ -12,7 +12,7 @@ if(!empty($slider_widget)) {
     $this->load->view($temp.'widget/page_widget');
 } */  
 ?>
-<section class="about-info-box sec-padding">
+<section class="about-info-box sec-padding" id="who-we-are">
 	<div class="thm-container">
 		<div class="row">
 			<div class="col-lg-4 hidden-md hidden-sm hidden-xs">
@@ -50,7 +50,7 @@ if(!empty($slider_widget)) {
     $this->load->view($temp.'widget/produk_widget');
 } */
 ?>
-<section class="welcome-services home-one">
+<section class="welcome-services home-one" id="services">
 	<div class="thm-container">
 		<div class="sec-title">
 			<h2><span>Our Featured Services</span></h2>
@@ -164,7 +164,7 @@ if(!empty($slider_widget)) {
 
 
 
-<section class="faq-section sec-padding">
+<section class="faq-section sec-padding" id="why-choose-us">
 	<div class="thm-container">
 		<div class="row">
 			<div class="col-lg-8 col-md-8">
@@ -553,7 +553,7 @@ if(!empty($delivery_widget)) {
 <!-- END WIDGET DELIVERY -->
 
 
-<section class="footer-top">
+<section class="footer-top" id="contact">
 	<div class="thm-container">
 		<div class="row">
 			<div class="col-md-12">

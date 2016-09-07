@@ -1,4 +1,4 @@
-<section class="our-client sec-padding">
+<section class="our-client sec-padding" id="clients">
 	<div class="thm-container">
 		<div class="sec-title">
 			<h2><span>our clients</span></h2>
