@@ -212,26 +212,6 @@ if(!empty($slider_widget)) {
 							</div>
 						</div>
 					</div>
-					<div class="accrodion">
-						<div class="accrodion-title">
-							<h4>Our About</h4>
-						</div>
-						<div class="accrodion-content">
-							<div class="img-caption">
-								<div class="img-box">
-									<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/accrodion/1.jpg" alt="Awesome Image"/>
-								</div>
-								<div class="content-box">
-									<h4>Our Delivery is all our our country</h4>
-									<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehen- derit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-									<ul>
-										<li><i class="fa fa-long-arrow-right"></i> Adipis civelit</li>
-										<li><i class="fa fa-long-arrow-right"></i> Adipis civelit</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4">
@@ -241,7 +221,6 @@ if(!empty($slider_widget)) {
 				<div class="view-location">
 					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/view-location.png" alt="Awesome Image"/>
 					<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipis civelit sed quia non numquam eius modi.</p>
-					<a href="#">view our locations</a>
 				</div>
 			</div>
 		</div>
