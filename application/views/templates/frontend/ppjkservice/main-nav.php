@@ -49,7 +49,7 @@
 				</div>
 			</div>
 			<div class="free-qoute-button pull-right">				
-				<a href="request-qoute.html">Get Free Quote</a>
+				<a href="<?php echo base_url()?>backend_panel">Login</a>
 			</div>
 		</div>
 	</div>
