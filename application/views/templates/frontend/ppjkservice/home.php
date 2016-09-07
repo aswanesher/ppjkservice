@@ -1,245 +1,26 @@
-<section class="rev_slider_wrapper thm-banner-wrapper">
-	<div id="slider1" class="rev_slider"  data-version="5.0">
-		<ul>
+<!-- WIDGET SLIDER -->
+<?php 
+if(!empty($slider_widget)) {
+    $this->load->view($temp.'widget/slider_widget');
+} 
+?>
+<!-- END WIDGET SLIDER -->
 
-			<li data-transition="parallaxvertical" data-ease="SlowMo.ease">
-				<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/slider/3.jpg"  alt="">
-				<div class="tp-caption sfb tp-resizeme caption-h1" 
-			        data-x="right" data-hoffset="0" 
-			        data-y="top" data-voffset="188" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="500">
-					We are logistic<br>network company
-			    </div>
-				<div class="tp-caption sfb tp-resizeme caption-p" 
-			        data-x="right" data-hoffset="33" 
-			        data-y="top" data-voffset="315" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="1000">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>sed do eiusmod tempor incid idunt ut labore et dolore<br>dolor sit amet, consectetur.
-			    </div>
-				<div class="tp-caption sfl tp-resizeme" 
-			        data-x="right" data-hoffset="127" 
-			        data-y="top" data-voffset="440" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="1500">
-					<a href="#" class="thm-btn">Get Free Quote <i class="fa fa-arrow-right"></i></a>
-			    </div>
-				<div class="tp-caption sfr tp-resizeme" 
-			        data-x="right" data-hoffset="342" 
-			        data-y="top" data-voffset="440" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="2000">
-					<a href="#" class="thm-btn inverse">View Services <i class="fa fa-arrow-right"></i></a>
-			    </div>
-			</li>
+<!-- WIDGET PAGE -->
+<?php 
+if(!empty($page_widget)) {
+    $this->load->view($temp.'widget/page_widget');
+}   
+?>
+<!-- END WIDGET PAGE -->
 
-			<li data-transition="parallaxvertical" data-ease="SlowMo.ease">
-				<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/slider/7.jpg"  alt="">
-				<div class="tp-caption sfb tp-resizeme caption-h1" 
-			        data-x="left" data-hoffset="0" 
-			        data-y="top" data-voffset="248" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="500">
-					We are logistic<br>network company
-			    </div>
-				<div class="tp-caption sfb tp-resizeme caption-p" 
-			        data-x="left" data-hoffset="0" 
-			        data-y="top" data-voffset="375" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="1000">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>sed do eiusmod tempor incid idunt ut labore et dolore<br>dolor sit amet, consectetur.
-			    </div>
-				<div class="tp-caption sfl tp-resizeme" 
-			        data-x="left" data-hoffset="0" 
-			        data-y="top" data-voffset="500" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="1500">
-					<a href="#" class="thm-btn">Get Free Quote <i class="fa fa-arrow-right"></i></a>
-			    </div>
-				<div class="tp-caption sfr tp-resizeme" 
-			        data-x="left" data-hoffset="215" 
-			        data-y="top" data-voffset="500" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="2000">
-					<a href="#" class="thm-btn inverse">View Services <i class="fa fa-arrow-right"></i></a>
-			    </div>
-			</li>
-
-			<li data-transition="parallaxvertical" data-ease="SlowMo.ease">
-				<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/slider/2.jpg"  alt="">
-				<div class="tp-caption sfb tp-resizeme caption-h1" 
-			        data-x="left" data-hoffset="0" 
-			        data-y="bottom" data-voffset="0" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="500">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/slider/cap-1.png" alt="Awesome Image"/>
-			    </div>
-				<div class="tp-caption sfb tp-resizeme caption-h1" 
-			        data-x="right" data-hoffset="0" 
-			        data-y="bottom" data-voffset="0" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="1700">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/slider/cap-2.png" alt="Awesome Image"/>
-			    </div>
-			    <div class="tp-caption sfb tp-resizeme caption-h1" 
-			        data-x="right" data-hoffset="120" 
-			        data-y="top" data-voffset="148" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="800">
-					We are logistic<br>network company
-			    </div>
-				<div class="tp-caption sfb tp-resizeme caption-p" 
-			        data-x="right" data-hoffset="50" 
-			        data-y="top" data-voffset="275" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="1100">
-					Duis qute irure dolor in reprehender it in voluptate velit esse cillum <br> dolore eu fugiat nulla pariotur. Excepteur sint occaeca.
-			    </div>
-			    <div class="tp-caption sfl tp-resizeme" 
-			        data-x="right" data-hoffset="460" 
-			        data-y="top" data-voffset="360" 
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;" 
-			        data-transform_in="o:0" 
-			        data-transform_out="o:0" 
-			        data-start="1500">
-					<a href="#" class="thm-btn inverse">Get Free Quote <i class="fa fa-arrow-right"></i></a>
-			    </div>
-			</li>
-		</ul>
-	</div>
-</section>
-
-<section class="about-info-box sec-padding">
-	<div class="thm-container">
-		<div class="row">
-			<div class="col-lg-4 hidden-md hidden-sm hidden-xs">
-				<div class="img-cap-effect">
-					<div class="img-box">
-						<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/about-info-box/2.jpg" alt="Awesome Image"/>
-						<div class="img-caption">
-							<div class="box-holder"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-8 col-md-12">
-				<div class="sec-title">
-					<h2><span>Who We Are</span></h2>
-					<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
-					<ul class="bulleted-list">
-						<li><i class="fa fa-arrow-circle-right"></i> Deliver Environmentally Responsible Client Services</li>
-						<li><i class="fa fa-arrow-circle-right"></i> Provide Employees with an Attractive Working Environment</li>
-						<li><i class="fa fa-arrow-circle-right"></i> Be an Active Community Partner</li>
-						<li><i class="fa fa-arrow-circle-right"></i> Maintain High Ethical Standards</li>
-						<li><i class="fa fa-arrow-circle-right"></i> Drive Continuous Improvement</li>
-					</ul>
-					<a href="#" class="thm-btn">view our services <i class="fa fa-arrow-right"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="welcome-services home-one">
-	<div class="thm-container">
-		<div class="sec-title">
-			<h2><span>Our Featured Services</span></h2>
-			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Consect petur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="welcome-single-services">
-					<div class="img-box">
-						<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/welcome-services/2.png" alt="">
-					</div>
-					<div class="text-box">
-						<div class="content">
-							<h3>ocean Fright</h3>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eure fugiat nulla pariatur.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="welcome-single-services">
-					<div class="img-box">
-						<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/welcome-services/1.png" alt="">
-					</div>
-					<div class="text-box">
-						<div class="content">
-							<h3>Air Fright</h3>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eure fugiat nulla pariatur.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--<div class="col-md-6">
-				<div class="welcome-single-services">
-					<div class="img-box">
-						<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/welcome-services/3.png" alt="">
-					</div>
-					<div class="text-box">
-						<div class="content">
-							<h3>warehouses</h3>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eure fugiat nulla pariatur.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="welcome-single-services">
-					<div class="img-box">
-						<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/welcome-services/4.png" alt="">
-					</div>
-					<div class="text-box">
-						<div class="content">
-							<h3>road Fright</h3>
-							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eure fugiat nulla pariatur.</p>
-						</div>
-					</div>
-				</div>
-			</div>-->
-		</div>
-	</div>
-</section>
+<!-- WIDGET BLOG -->
+<?php 
+if(!empty($blog_widget)) {
+    $this->load->view($temp.'widget/produk_widget');
+} 
+?>
+<!-- END WIDGET BLOG --> 
 
 <!--<section class="featured-services style-two">
 	<div class="thm-container">
@@ -317,7 +98,7 @@
 
 
 
-<section class="faq-section sec-padding">
+<!--<section class="faq-section sec-padding">
 	<div class="thm-container">
 		<div class="row">
 			<div class="col-lg-8 col-md-8">
@@ -399,7 +180,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
 
 
 
@@ -688,110 +469,25 @@
 </section>-->
 
 
-<section class="latest-blog sec-padding">
-	<div class="thm-container">
-		<div class="sec-title">
-			<h2><span>latest Blog</span></h2>
-		</div>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="single-blog-post img-cap-effect">
-					<div class="img-box">
-						<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/blog/1.jpg" alt="Awesome Image"/>
-						<div class="img-caption">
-							<div class="box-holder">
-								<ul>
-									<li><a href="#"><i class="fa fa-link"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="content-box">
-						<div class="date">
-							<span>02</span>/DEC
-						</div>
-						<a href="#"><h3>Heading of Blog</h3></a>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa nt ium doloremque laudantium tota.</p>
-						<a href="#" class="thm-btn">Read More <i class="fa fa-arrow-right"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="single-blog-post img-cap-effect">
-					<div class="img-box">
-						<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/blog/2.jpg" alt="Awesome Image"/>
-						<div class="img-caption">
-							<div class="box-holder">
-								<ul>
-									<li><a href="#"><i class="fa fa-link"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="content-box">
-						<div class="date">
-							<span>02</span>/DEC
-						</div>
-						<a href="#"><h3>Heading of Blog</h3></a>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa nt ium doloremque laudantium tota.</p>
-						<a href="#" class="thm-btn">Read More <i class="fa fa-arrow-right"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<!-- WIDGET BLOG -->
+<?php 
+if(!empty($blog_widget)) {
+    $this->load->view($temp.'widget/blog_widget');
+} 
+?>
+<!-- END WIDGET BLOG --> 
 
 
-<section class="our-client sec-padding">
-	<div class="thm-container">
-		<div class="sec-title">
-			<h2><span>our clients</span></h2>
-		</div>
-		<div class="client-carousel">
-			<div class="owl-carousel owl-theme">
-				<div class="item">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/clients/1.jpg" alt="Awesome Image"/>
-				</div>
-				<div class="item">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/clients/2.jpg" alt="Awesome Image"/>
-				</div>
-				<div class="item">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/clients/3.jpg" alt="Awesome Image"/>
-				</div>
-				<div class="item">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/clients/4.jpg" alt="Awesome Image"/>
-				</div>
-				<div class="item">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/clients/5.jpg" alt="Awesome Image"/>
-				</div>
-				<div class="item">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/clients/6.jpg" alt="Awesome Image"/>
-				</div>
-				<div class="item">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/clients/1.jpg" alt="Awesome Image"/>
-				</div>
-				<div class="item">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/clients/2.jpg" alt="Awesome Image"/>
-				</div>
-				<div class="item">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/clients/3.jpg" alt="Awesome Image"/>
-				</div>
-				<div class="item">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/clients/4.jpg" alt="Awesome Image"/>
-				</div>
-				<div class="item">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/clients/5.jpg" alt="Awesome Image"/>
-				</div>
-				<div class="item">
-					<img src="<?php echo base_url();?>assets/frontend/ppjkservice/images/clients/6.jpg" alt="Awesome Image"/>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<!-- WIDGET DELIVERY -->
+<?php 
+if(!empty($delivery_widget)) {
+    $this->load->view($temp.'widget/delivery_widget');
+}   
+?>
+<!-- END WIDGET DELIVERY -->
 
-<section class="footer-top">
+
+<!--<section class="footer-top">
 	<div class="thm-container">
 		<div class="row">
 			<div class="col-md-12">
@@ -805,6 +501,6 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
 
 

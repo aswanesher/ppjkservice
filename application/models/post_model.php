@@ -165,7 +165,7 @@ class Post_model extends CI_Model
         $this->db->from('kb_posts');
         $this->db->where('post_parent', $id);
         $this->db->order_by('id_post', 'desc');
-        $this->db->limit(3);
+        $this->db->limit(2);
 
         $query = $this->db->get();
         return $query->result();
