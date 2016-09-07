@@ -53,13 +53,6 @@
 							</a>
 						</li>
 
-						<li>
-							<a href="<?php echo base_url()?>generator/panel">
-								<i class="ace-icon fa fa-gear"></i>
-								Code Builder
-							</a>
-						</li>
-
 						<li class="divider"></li>
 
 						<li>
