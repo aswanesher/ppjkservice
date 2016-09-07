@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-09-07 11:06:33
+Date: 2016-09-07 14:25:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -206,19 +206,20 @@ CREATE TABLE `kb_media` (
   KEY `kategori` (`kategori`),
   CONSTRAINT `kb_media_ibfk_1` FOREIGN KEY (`author`) REFERENCES `kb_users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `kb_media_ibfk_2` FOREIGN KEY (`kategori`) REFERENCES `kb_media_type` (`id_media_cat`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of kb_media
 -- ----------------------------
-INSERT INTO `kb_media` VALUES ('1', 'Slider 1', 'Slider', '#', '/savanacms/uploads/images/slide_01.jpg', '/savanacms/uploads/.thumbs/images/slide_01.jpg', '1', '#', '1', '2016-06-23 11:27:23', '2016-06-23 11:32:44');
-INSERT INTO `kb_media` VALUES ('2', 'JNE', 'pengiriman', 'JNE', '/savanacms/uploads/images/JNE-logo-gambar-coreldraw-cdr.jpg', '/savanacms/uploads/.thumbs/images/JNE-logo-gambar-coreldraw-cdr.jpg', '3', '#', '1', '2016-06-23 11:39:31', '2016-06-30 09:52:12');
-INSERT INTO `kb_media` VALUES ('3', 'Tiki', 'Tiki', 'Tiki', '/savanacms/uploads/images/tiki-logo.jpg', '/savanacms/uploads/.thumbs/images/tiki-logo.jpg', '3', '#', '1', '2016-06-23 11:40:06', '2016-06-30 09:54:50');
-INSERT INTO `kb_media` VALUES ('4', 'JnT', 'pengiriman', 'JnT', '/savanacms/uploads/images/Logo-JT-Express-140x130.jpg', '/savanacms/uploads/.thumbs/images/Logo-JT-Express-140x130.jpg', '3', '#', '1', '2016-06-23 11:44:34', '2016-06-30 09:55:16');
-INSERT INTO `kb_media` VALUES ('5', 'Pos', 'pengiriman', 'Pos', '/savanacms/uploads/images/pos.png', '/savanacms/uploads/.thumbs/images/pos.png', '3', '#', '1', '2016-06-23 11:44:54', '2016-06-23 11:44:54');
-INSERT INTO `kb_media` VALUES ('6', 'BCA', 'bank', 'BCA', '/savanacms/uploads/images/logobca-highres-bluliner-master-2011.jpg', '/savanacms/uploads/.thumbs/images/logobca-highres-bluliner-master-2011.jpg', '2', '#', '1', '2016-06-23 11:45:31', '2016-06-30 09:57:04');
-INSERT INTO `kb_media` VALUES ('7', 'Mandiri', 'bank', 'Mandiri', '/savanacms/uploads/images/Lowongan-Kerja-Terbaru-Bank-Mandiri.jpg', '/savanacms/uploads/.thumbs/images/Lowongan-Kerja-Terbaru-Bank-Mandiri.jpg', '2', '#', '1', '2016-06-23 11:45:50', '2016-06-30 09:57:55');
-INSERT INTO `kb_media` VALUES ('8', 'BRI', 'bank', 'BRI', '/savanacms/uploads/images/Logo%20BRI.jpg', '/savanacms/uploads/.thumbs/images/Logo%20BRI.jpg', '2', '#', '1', '2016-06-23 11:46:06', '2016-06-30 09:59:50');
+INSERT INTO `kb_media` VALUES ('1', 'We are logistic<br>network company', 'Slider', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>sed do eiusmod tempor incid idunt ut la', '/ppjkservice/uploads/images/3.jpg', '/ppjkservice/uploads/.thumbs/images/3.jpg', '1', '', '1', '2016-06-23 11:27:23', '2016-09-07 01:34:56');
+INSERT INTO `kb_media` VALUES ('9', 'We are logistic<br>network company', 'slider ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>sed do eiusmod tempor incid idunt ut la', '/ppjkservice/uploads/images/7.jpg', '/ppjkservice/uploads/.thumbs/images/7.jpg', '1', '', '1', '2016-09-07 01:26:05', '2016-09-07 01:35:35');
+INSERT INTO `kb_media` VALUES ('10', 'We are logistic<br>network company', 'slider', 'Duis qute irure dolor in reprehender it in voluptate velit esse cillum <br> dolore eu fugiat nulla ', '/ppjkservice/uploads/images/2.jpg', '/ppjkservice/uploads/.thumbs/images/2.jpg', '1', '', '1', '2016-09-07 01:29:43', '2016-09-07 01:35:58');
+INSERT INTO `kb_media` VALUES ('11', 'Client1', 'client', 'client', '/ppjkservice/uploads/images/4.jpg', '/ppjkservice/uploads/.thumbs/images/4.jpg', '4', '', '1', '2016-09-07 02:12:22', '2016-09-07 02:15:55');
+INSERT INTO `kb_media` VALUES ('12', 'Client 2', 'client 2', 'client 2', '/ppjkservice/uploads/images/5.jpg', '/ppjkservice/uploads/.thumbs/images/5.jpg', '4', '', '1', '2016-09-07 02:13:08', '2016-09-07 02:16:05');
+INSERT INTO `kb_media` VALUES ('13', 'client 3', 'client 3', 'client 3', '/ppjkservice/uploads/images/6.jpg', '/ppjkservice/uploads/.thumbs/images/6.jpg', '4', '', '1', '2016-09-07 02:16:26', '2016-09-07 02:16:26');
+INSERT INTO `kb_media` VALUES ('14', 'client 4', 'client 4', 'client 4', '/ppjkservice/uploads/images/4.jpg', '/ppjkservice/uploads/.thumbs/images/4.jpg', '4', '', '1', '2016-09-07 02:17:02', '2016-09-07 02:17:02');
+INSERT INTO `kb_media` VALUES ('15', 'Client 5', 'Client 5', 'Client 5', '/ppjkservice/uploads/images/5.jpg', '/ppjkservice/uploads/.thumbs/images/5.jpg', '4', '', '1', '2016-09-07 02:17:17', '2016-09-07 02:17:17');
+INSERT INTO `kb_media` VALUES ('16', 'Client 6', 'Client 6', 'Client 6', '/ppjkservice/uploads/images/6.jpg', '/ppjkservice/uploads/.thumbs/images/6.jpg', '4', '', '1', '2016-09-07 02:17:37', '2016-09-07 02:17:37');
 
 -- ----------------------------
 -- Table structure for `kb_media_type`
@@ -231,7 +232,7 @@ CREATE TABLE `kb_media_type` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id_media_cat`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of kb_media_type
@@ -239,6 +240,7 @@ CREATE TABLE `kb_media_type` (
 INSERT INTO `kb_media_type` VALUES ('1', 'Slider', '1', '2016-05-16 02:24:32', '2016-05-16 02:24:32');
 INSERT INTO `kb_media_type` VALUES ('2', 'Bank', '1', '2016-05-31 10:41:50', '2016-05-31 10:41:50');
 INSERT INTO `kb_media_type` VALUES ('3', 'Pengiriman', '1', '2016-05-31 02:59:17', '2016-05-31 02:59:25');
+INSERT INTO `kb_media_type` VALUES ('4', 'Client', '1', '2016-09-07 02:11:51', '2016-09-07 02:11:51');
 
 -- ----------------------------
 -- Table structure for `kb_menu`
@@ -290,7 +292,7 @@ INSERT INTO `kb_menu` VALUES ('38', 'Katalog Produk', 'module', '0', '0', '#', '
 INSERT INTO `kb_menu` VALUES ('45', 'Profil', 'url', '0', '0', 'profile', '', '1', 'backend', null, '0', '0', '0', null);
 INSERT INTO `kb_menu` VALUES ('60', 'Template', 'module', '0', '26', 'templatemanager', '', '1', 'backend', null, '3', '0', '1', '');
 INSERT INTO `kb_menu` VALUES ('62', 'Home', 'module', '0', '0', '', '', '1', 'frontend', null, '0', '1', '1', 'fa fa-caret-right');
-INSERT INTO `kb_menu` VALUES ('63', 'Profil', 'page', '0', '0', 'p/profil', 'profil', '1', 'frontend', null, '0', '1', '1', 'fa fa-caret-right');
+INSERT INTO `kb_menu` VALUES ('63', 'Profil', 'page', '0', '0', 'p/who-we-are', 'profil', '1', 'frontend', null, '0', '1', '1', 'fa fa-caret-right');
 INSERT INTO `kb_menu` VALUES ('64', 'Peluang Usaha', 'page', '0', '0', 'p/peluang-usaha', 'peluang-usaha', '1', 'frontend', null, '0', '1', '1', 'fa fa-caret-right');
 INSERT INTO `kb_menu` VALUES ('65', 'Testimonial', 'page', '0', '0', 'p/testimonial', 'testimonial', '1', 'frontend', null, '0', '1', '1', 'fa fa-caret-right');
 INSERT INTO `kb_menu` VALUES ('66', 'Kontak', 'page', '0', '0', 'p/kontak', 'kontak', '1', 'frontend', null, '0', '1', '1', 'fa fa-caret-right');
@@ -540,7 +542,7 @@ INSERT INTO `kb_posts` VALUES ('3', '1', '2016-06-23 00:00:00', '2016-06-23 11:5
 INSERT INTO `kb_posts` VALUES ('4', '1', '2016-06-23 00:00:00', '2016-06-23 11:53:34', '<p>\r\n	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus tincidunt, gravida ante vel, consequat nibh. Nunc vulputate mi sed fermentum bibendum. Nunc nunc nunc, molestie in risus sit amet, eleifend condimentum nisi. Fusce eu laoreet est. Fusce non libero in mauris aliquet vehicula. Vestibulum suscipit ante risus, a lobortis sapien gravida ut. Donec eget pharetra eros. Fusce in diam dapibus, consequat erat ac, convallis tortor. Vivamus vulputate maximus est, ac congue tortor sagittis sed. Pellentesque eget convallis ex. Curabitur eget dui dapibus, molestie lacus at, pellentesque quam. In tempor ut nisl sit amet viverra. Aliquam interdum pellentesque lacinia. Nam quis arcu facilisis, bibendum arcu at, molestie arcu.</p>\r\n<p>\r\n	Donec facilisis urna metus, vel cursus felis sodales vitae. Sed sodales, turpis vel semper imperdiet, mauris mi dignissim velit, quis hendrerit tortor nisl convallis nulla. Donec dignissim felis quis ipsum feugiat porttitor. Phasellus tempus odio consequat, imperdiet magna a, fermentum risus. Aenean dictum eros eu erat faucibus, in scelerisque nisl egestas. Aenean lobortis efficitur nulla quis dignissim. In a urna vitae ex luctus sagittis vel eget ipsum. Suspendisse non vulputate nulla.</p>\r\n<p>\r\n	Quisque vitae justo egestas sapien vulputate dictum at vitae urna. Proin faucibus bibendum ex commodo sodales. Vivamus eleifend eleifend felis, id semper odio viverra a. Donec est enim, aliquet sit amet lorem vitae, dignissim maximus arcu. Aliquam vel egestas risus. Morbi sed purus quis elit commodo mollis a fringilla metus. Praesent id rutrum mi. Aenean pretium sem finibus ante ultrices, quis vulputate tellus sagittis. Mauris sagittis rutrum massa, vitae vehicula sapien laoreet et.</p>\r\n<p>\r\n	Pellentesque at pellentesque leo. Aliquam eu odio mauris. Cras sit amet libero porttitor, consequat nisl sed, facilisis erat. Aliquam rutrum nec odio at semper. Aliquam at sem sed urna hendrerit rutrum ut at velit. Donec ac libero quis sem tincidunt dictum in id ex. Donec eu metus tempor, cursus ipsum a, convallis orci. Nulla aliquet imperdiet nisi id luctus. Nulla quis interdum nisl. Ut a blandit purus, id eleifend mi. Suspendisse potenti.</p>\r\n<p>\r\n	Sed sed sem vitae metus gravida finibus eget in ligula. Integer quis rutrum elit. Sed id tortor vitae lacus porta vestibulum et nec tortor. Etiam imperdiet neque ut mollis vehicula. Vestibulum eu mattis nisi, a sollicitudin dui. Mauris bibendum dictum eleifend. Suspendisse volutpat vel tellus eleifend eleifend. Fusce laoreet est non luctus condimentum.</p>\r\n', 'Lorem ipsum 3', '', 'publish', 'on', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '1', 'post', '', '0', '/savanacms/uploads/images/domains-that-never-sleep.png', null, 'lorem-ipsum-3');
 INSERT INTO `kb_posts` VALUES ('5', '1', '2016-06-23 00:00:00', '2016-06-23 02:12:58', '<ul class=\"p_list\">\r\n	<li>\r\n		Lorem</li>\r\n	<li>\r\n		Ipsum</li>\r\n	<li>\r\n		Dolor</li>\r\n	<li>\r\n		Sit&nbsp;</li>\r\n	<li>\r\n		Amet</li>\r\n</ul>\r\n', 'Pricing 1', '', 'publish', 'on', '2016-06-23 00:00:00', '2016-06-27 01:16:12', '2', 'post', '', '0', '', null, 'pricing-1');
 INSERT INTO `kb_posts` VALUES ('6', '1', '2016-06-23 00:00:00', '2016-06-23 02:13:16', '<ul class=\"p_list\">\r\n	<li>\r\n		Lorem</li>\r\n	<li>\r\n		Ipsum</li>\r\n	<li>\r\n		Dolor</li>\r\n	<li>\r\n		Sit&nbsp;</li>\r\n	<li>\r\n		Amet</li>\r\n</ul>\r\n', 'Pricing 2', '', 'publish', 'on', '2016-06-23 00:00:00', '2016-06-27 01:17:56', '2', 'post', '', '0', '', null, 'pricing-2');
-INSERT INTO `kb_posts` VALUES ('7', '1', '2016-06-23 00:00:00', '2016-06-23 04:05:16', '<p>\r\n	<img alt=\"\" src=\"/savanacms/uploads/images/314756_headset-virtual-reality-fove_663_382.jpg\" style=\"width: 300px; height: 173px; float: left;margin:10px\" />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus tincidunt, gravida ante vel, consequat nibh. Nunc vulputate mi sed fermentum bibendum. Nunc nunc nunc, molestie in risus sit amet, eleifend condimentum nisi. Fusce eu laoreet est. Fusce non libero in mauris aliquet vehicula. Vestibulum suscipit ante risus, a lobortis sapien gravida ut. Donec eget pharetra eros. Fusce in diam dapibus, consequat erat ac, convallis tortor. Vivamus vulputate maximus est, ac congue tortor sagittis sed. Pellentesque eget convallis ex. Curabitur eget dui dapibus, molestie lacus at, pellentesque quam. In tempor ut nisl sit amet viverra. Aliquam interdum pellentesque lacinia. Nam quis arcu facilisis, bibendum arcu at, molestie arcu.</p>\r\n<p>\r\n	&nbsp;</p>\r\n<p>\r\n	Donec facilisis urna metus, vel cursus felis sodales vitae. Sed sodales, turpis vel semper imperdiet, mauris mi dignissim velit, quis hendrerit tortor nisl convallis nulla. Donec dignissim felis quis ipsum feugiat porttitor. Phasellus tempus odio consequat, imperdiet magna a, fermentum risus. Aenean dictum eros eu erat faucibus, in scelerisque nisl egestas. Aenean lobortis efficitur nulla quis dignissim. In a urna vitae ex luctus sagittis vel eget ipsum. Suspendisse non vulputate nulla.</p>\r\n<p>\r\n	&nbsp;</p>\r\n<p>\r\n	Quisque vitae justo egestas sapien vulputate dictum at vitae urna. Proin faucibus bibendum ex commodo sodales. Vivamus eleifend eleifend felis, id semper odio viverra a. Donec est enim, aliquet sit amet lorem vitae, dignissim maximus arcu. Aliquam vel egestas risus. Morbi sed purus quis elit commodo mollis a fringilla metus. Praesent id rutrum mi. Aenean pretium sem finibus ante ultrices, quis vulputate tellus sagittis. Mauris sagittis rutrum massa, vitae vehicula sapien laoreet et.</p>\r\n<p>\r\n	&nbsp;</p>\r\n<p>\r\n	Pellentesque at pellentesque leo. Aliquam eu odio mauris. Cras sit amet libero porttitor, consequat nisl sed, facilisis erat. Aliquam rutrum nec odio at semper. Aliquam at sem sed urna hendrerit rutrum ut at velit. Donec ac libero quis sem tincidunt dictum in id ex. Donec eu metus tempor, cursus ipsum a, convallis orci. Nulla aliquet imperdiet nisi id luctus. Nulla quis interdum nisl. Ut a blandit purus, id eleifend mi. Suspendisse potenti.</p>\r\n<p>\r\n	&nbsp;</p>\r\n<p>\r\n	Sed sed sem vitae metus gravida finibus eget in ligula. Integer quis rutrum elit. Sed id tortor vitae lacus porta vestibulum et nec tortor. Etiam imperdiet neque ut mollis vehicula. Vestibulum eu mattis nisi, a sollicitudin dui. Mauris bibendum dictum eleifend. Suspendisse volutpat vel tellus eleifend eleifend. Fusce laoreet est non luctus condimentum.</p>\r\n', 'Profil', '', 'publish', 'on', '2016-06-23 00:00:00', '2016-06-29 10:49:03', '0', 'page', '', '0', '', 'fullwidth', 'profil');
+INSERT INTO `kb_posts` VALUES ('7', '1', '2016-06-23 00:00:00', '2016-06-23 04:05:16', '<p>\r\n	Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>\r\n<ul class=\"bulleted-list\">\r\n	<li>\r\n		Deliver Environmentally Responsible Client Services</li>\r\n	<li>\r\n		Provide Employees with an Attractive Working Environment</li>\r\n	<li>\r\n		Be an Active Community Partner</li>\r\n	<li>\r\n		Maintain High Ethical Standards</li>\r\n	<li>\r\n		Drive Continuous Improvement</li>\r\n</ul>\r\n<p>\r\n	<a class=\"thm-btn\" href=\"#\">view our services </a></p>\r\n', 'Who We Are', '', 'publish', 'on', '2016-06-23 00:00:00', '2016-09-07 01:52:02', '0', 'page', '', '0', '', 'fullwidth', 'who-we-are');
 INSERT INTO `kb_posts` VALUES ('8', '1', '2016-06-24 00:00:00', '2016-06-24 05:30:36', '', 'Peluang Usaha', '', 'publish', 'on', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0', 'page', '', '0', '', 'pricing', 'peluang-usaha');
 INSERT INTO `kb_posts` VALUES ('9', '1', '2016-06-24 00:00:00', '2016-06-24 05:31:49', '', 'Testimonial', '', 'publish', 'on', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0', 'page', '', '0', '', 'testimonial', 'testimonial');
 INSERT INTO `kb_posts` VALUES ('10', '1', '2016-06-24 00:00:00', '2016-06-24 05:32:44', '', 'Kontak', '', 'publish', 'on', '2016-06-24 00:00:00', '2016-06-29 01:20:12', '0', 'page', '', '0', '', 'contact_fullwidth', 'kontak');
@@ -583,10 +585,8 @@ CREATE TABLE `kb_products` (
 -- ----------------------------
 -- Records of kb_products
 -- ----------------------------
-INSERT INTO `kb_products` VALUES ('1', '1', 'pk1', 'Pakaian 1', '1', '0', '<p>\r\n	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus tincidunt, gravida ante vel, consequat nibh. Nunc vulputate mi sed fermentum bibendum. Nunc nunc nunc, molestie in risus sit amet, eleifend condimentum nisi. Fusce eu laoreet est. Fusce non libero in mauris aliquet vehicula. Vestibulum suscipit ante risus, a lobortis sapien gravida ut.</p>\r\n', '<p>\r\n	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus tincidunt, gravida ante vel, consequat nibh. Nunc vulputate mi sed fermentum bibendum. Nunc nunc nunc, molestie in risus sit amet, eleifend condimentum nisi. Fusce eu laoreet est. Fusce non libero in mauris aliquet vehicula. Vestibulum suscipit ante risus, a lobortis sapien gravida ut.</p>\r\n', 'F', 'F', '', '', '', 'pakaian-1', '/savanacms/uploads/images/quick_view_img_1.jpg', '/savanacms/uploads/.thumbs/images/quick_view_img_1.jpg', 'publish', '0', '2016-06-23 05:25:39', null);
-INSERT INTO `kb_products` VALUES ('2', '1', 'pk2', 'Pakaian 2', '1', '0', '<p>\r\n	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus tincidunt, gravida ante vel, consequat nibh. Nunc vulputate mi sed fermentum bibendum. Nunc nunc nunc, molestie in risus sit amet, eleifend condimentum nisi. Fusce eu laoreet est. Fusce non libero in mauris aliquet vehicula. Vestibulum suscipit ante risus, a lobortis sapien gravida ut.</p>\r\n', '<p>\r\n	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus tincidunt, gravida ante vel, consequat nibh. Nunc vulputate mi sed fermentum bibendum. Nunc nunc nunc, molestie in risus sit amet, eleifend condimentum nisi. Fusce eu laoreet est. Fusce non libero in mauris aliquet vehicula. Vestibulum suscipit ante risus, a lobortis sapien gravida ut.</p>\r\n', 'F', 'F', '', '', '', 'pakaian-2', '/savanacms/uploads/images/quick_view_img_1.jpg', '/savanacms/uploads/.thumbs/images/quick_view_img_1.jpg', 'publish', '0', '2016-06-24 05:26:52', null);
-INSERT INTO `kb_products` VALUES ('3', '1', 'pk3', 'Pakaian 3', '1', '0', '<p>\r\n	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus tincidunt, gravida ante vel, consequat nibh. Nunc vulputate mi sed fermentum bibendum. Nunc nunc nunc, molestie in risus sit amet, eleifend condimentum nisi. Fusce eu laoreet est. Fusce non libero in mauris aliquet vehicula. Vestibulum suscipit ante risus, a lobortis sapien gravida ut.</p>\r\n', '<p>\r\n	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus tincidunt, gravida ante vel, consequat nibh. Nunc vulputate mi sed fermentum bibendum. Nunc nunc nunc, molestie in risus sit amet, eleifend condimentum nisi. Fusce eu laoreet est. Fusce non libero in mauris aliquet vehicula. Vestibulum suscipit ante risus, a lobortis sapien gravida ut.</p>\r\n', 'F', 'F', '', '', '', 'pakaian-3', '/savanacms/uploads/images/quick_view_img_1.jpg', '/savanacms/uploads/.thumbs/images/quick_view_img_1.jpg', 'publish', '0', '2016-06-24 05:27:45', null);
-INSERT INTO `kb_products` VALUES ('4', '1', 'pk4', 'Pakaian 4', '1', '0', '<p>\r\n	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus tincidunt, gravida ante vel, consequat nibh. Nunc vulputate mi sed fermentum bibendum. Nunc nunc nunc, molestie in risus sit amet, eleifend condimentum nisi. Fusce eu laoreet est. Fusce non libero in mauris aliquet vehicula. Vestibulum suscipit ante risus, a lobortis sapien gravida ut.</p>\r\n', '<p>\r\n	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tellus tincidunt, gravida ante vel, consequat nibh. Nunc vulputate mi sed fermentum bibendum. Nunc nunc nunc, molestie in risus sit amet, eleifend condimentum nisi. Fusce eu laoreet est. Fusce non libero in mauris aliquet vehicula. Vestibulum suscipit ante risus, a lobortis sapien gravida ut.</p>\r\n', 'F', 'F', '', '', '', 'pakaian-4', '/savanacms/uploads/images/quick_view_img_1.jpg', '/savanacms/uploads/.thumbs/images/quick_view_img_1.jpg', 'publish', '0', '2016-06-27 10:27:25', null);
+INSERT INTO `kb_products` VALUES ('1', '1', 'PD01', 'OCEAN FRIGHT', '2', '0', '<p>\r\n	Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eure fugiat nulla pariatur.</p>\r\n', '<p>\r\n	Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eure fugiat nulla pariatur.</p>\r\n', 'F', 'F', '', '', '', 'ocean-fright', '/ppjkservice/uploads/images/2(2).jpg', '/ppjkservice/uploads/.thumbs/images/2(2).jpg', 'publish', '0', '2016-09-07 02:03:30', null);
+INSERT INTO `kb_products` VALUES ('2', '1', 'PD02', 'AIR FRIGHT', '2', '0', '<p>\r\n	Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eure fugiat nulla pariatur.</p>\r\n', '<p>\r\n	Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eure fugiat nulla pariatur.</p>\r\n', 'F', 'F', '', '', '', 'air-fright', '/ppjkservice/uploads/images/single-service-3.jpg', '/ppjkservice/uploads/.thumbs/images/single-service-3.jpg', 'publish', '0', '2016-09-07 01:57:40', null);
 
 -- ----------------------------
 -- Table structure for `kb_products_category`
@@ -604,12 +604,12 @@ CREATE TABLE `kb_products_category` (
   PRIMARY KEY (`id_prod_category`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `kb_products_category_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `kb_users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of kb_products_category
 -- ----------------------------
-INSERT INTO `kb_products_category` VALUES ('1', 'Pakaian', 'pakaian', '1', '0', '1', '2016-06-23 05:24:00', '2016-06-23 05:24:00');
+INSERT INTO `kb_products_category` VALUES ('2', 'Service', 'service', '1', '0', '1', '2016-09-07 01:54:55', '2016-09-07 01:54:55');
 
 -- ----------------------------
 -- Table structure for `kb_products_detail`
@@ -628,15 +628,13 @@ CREATE TABLE `kb_products_detail` (
   PRIMARY KEY (`id_detail_produk`),
   KEY `id_produk` (`id_produk`),
   CONSTRAINT `kb_products_detail_ibfk_1` FOREIGN KEY (`id_produk`) REFERENCES `kb_products` (`id_produk`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of kb_products_detail
 -- ----------------------------
-INSERT INTO `kb_products_detail` VALUES ('1', '1', '85000', '0', '', null, '', '10', '0');
-INSERT INTO `kb_products_detail` VALUES ('2', '2', '90000', '0', '', null, '', '10', '0');
-INSERT INTO `kb_products_detail` VALUES ('3', '3', '100000', '0', '', null, '', '10', '0');
-INSERT INTO `kb_products_detail` VALUES ('4', '4', '120000', '0', '', null, '', '10', '0');
+INSERT INTO `kb_products_detail` VALUES ('5', '1', '0', '0', '', null, '', '0', '0');
+INSERT INTO `kb_products_detail` VALUES ('6', '2', '0', '0', '', null, '', '0', '0');
 
 -- ----------------------------
 -- Table structure for `kb_reseller_type`
@@ -839,7 +837,7 @@ CREATE TABLE `kb_widgets` (
 -- Records of kb_widgets
 -- ----------------------------
 INSERT INTO `kb_widgets` VALUES ('5', 'slider_w', '', '1', null, null, '1', '2016-05-18 00:00:00', null);
-INSERT INTO `kb_widgets` VALUES ('8', 'product_w', '<h2 style=\"text-align: center;\">\n	Katalog Produk</h2>\n', '0', '', null, '1', '2016-05-19 00:00:00', '2016-06-02 03:42:24');
+INSERT INTO `kb_widgets` VALUES ('8', 'product_w', '<p>\r\n	<strong>OUR FEATURED SERVICES</strong></p>\r\n<p>\r\n	Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Consect petur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>\r\n', '0', 'produk', null, '1', '2016-05-19 00:00:00', '2016-09-07 01:59:06');
 INSERT INTO `kb_widgets` VALUES ('9', 'post_w', '', '9', '', null, '1', '2016-05-19 00:00:00', null);
 INSERT INTO `kb_widgets` VALUES ('10', 'page_w', '', '7', '0', null, '1', '2016-05-19 00:00:00', '2016-06-23 04:06:16');
 INSERT INTO `kb_widgets` VALUES ('11', 'testimonial_w', '<h3 style=\"text-align: center;\">\n	Testimonial</h3>\n', '0', '', null, '1', '2016-05-19 00:00:00', '2016-06-02 03:42:53');
@@ -848,5 +846,5 @@ INSERT INTO `kb_widgets` VALUES ('14', 'team_w', '', '3', '', null, '1', '2016-0
 INSERT INTO `kb_widgets` VALUES ('16', 'runningtext_w', '', '3', '0', null, '1', '2016-05-30 11:10:55', '2016-06-27 03:38:55');
 INSERT INTO `kb_widgets` VALUES ('17', 'blog_w', '<h2 style=\"text-align: center;\">\r\n	The amazing Builder</h2>\r\n<p style=\"text-align: center;\">\r\n	Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad&nbsp; voluptate velit esse cillum dolore eu fugiat.</p>\r\n', '1', '', null, '1', '2016-05-30 01:41:14', '2016-06-23 11:52:17');
 INSERT INTO `kb_widgets` VALUES ('19', 'bank_w', '<p>\r\n	Bank</p>\r\n', '2', '0', null, '1', '2016-05-31 10:45:43', '2016-06-27 02:19:24');
-INSERT INTO `kb_widgets` VALUES ('21', 'delivery_w', '<p>\r\n	Pengiriman</p>\r\n', '3', '0', null, '1', '2016-05-31 03:07:29', '2016-06-27 02:55:37');
+INSERT INTO `kb_widgets` VALUES ('21', 'delivery_w', '', '4', '0', null, '1', '2016-05-31 03:07:29', '2016-09-07 02:18:14');
 INSERT INTO `kb_widgets` VALUES ('22', 'custom_w', '<a class=\"twitter-timeline\" data-widget-id=\"737616268274999296\" href=\"https://twitter.com/kaosnyabagus\">Tweets by @kaosnyabagus</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?\'http\':\'https\';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\"://platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");</script>', '0', '', null, '1', '2016-05-31 07:12:21', '2016-06-04 10:19:22');
