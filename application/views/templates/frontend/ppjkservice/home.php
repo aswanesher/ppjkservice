@@ -537,9 +537,9 @@ if(!empty($slider_widget)) {
 
 <!-- WIDGET BLOG -->
 <?php 
-if(!empty($blog_widget)) {
+/*if(!empty($blog_widget)) {
     $this->load->view($temp.'widget/blog_widget');
-} 
+} */
 ?>
 <!-- END WIDGET BLOG --> 
 
