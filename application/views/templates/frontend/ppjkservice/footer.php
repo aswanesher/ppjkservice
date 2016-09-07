@@ -4,7 +4,7 @@
 			<div class="col-md-3 col-sm-6 footer-widget">
 				<div class="about-widget">
 					<a href="#"><img src="<?php echo $wlogo;?>" alt="Awesome Image"/></a>
-					<p><?php echo $meta_desc?></p>
+					<p style="margin-top:0px !important;"><?php echo $meta_desc?></p>
 					<a href="#">Read More <i class="fa fa-angle-double-right"></i></a>
 					<ul class="social">
 						<li><a href="<?php echo $fb;?>"><i class="fa fa-facebook"></i></a></li>
