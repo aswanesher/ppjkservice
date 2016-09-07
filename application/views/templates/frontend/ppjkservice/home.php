@@ -22,7 +22,7 @@ if(!empty($blog_widget)) {
 ?>
 <!-- END WIDGET BLOG --> 
 
-<!--<section class="featured-services style-two">
+<section class="featured-services style-two">
 	<div class="thm-container">
 		<div class="row">
 			<div class="col-lg-8 col-md-12 featured-service-box pull-right">
@@ -94,7 +94,7 @@ if(!empty($blog_widget)) {
 			</div>
 		</div>
 	</div>
-</section>-->
+</section>
 
 
 
