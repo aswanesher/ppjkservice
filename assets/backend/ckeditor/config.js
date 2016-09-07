@@ -4,7 +4,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 CKEDITOR.editorConfig = function( config )
 {
-var url = 'http://localhost/savanacms/';
+var url = 'http://savanatechnology.com/ppjkservice/';
 config.filebrowserBrowseUrl = url+'assets/backend/kcfinder/browse.php?type=files';
 config.filebrowserImageBrowseUrl = url+'assets/backend/kcfinder/browse.php?type=images';
 config.filebrowserFlashBrowseUrl = url+'assets/backend/kcfinder/browse.php?type=flash';
