@@ -228,7 +228,7 @@
 					<center><?php echo $this->pagination->create_links(); ?></center>
 				</div><!-- /.span -->
 			</div><!-- /.row -->
-
+			</div>
 
 
 
