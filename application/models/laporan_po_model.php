@@ -93,6 +93,16 @@ class Laporan_po_model extends CI_Model
         return $this->db->delete('kb_po');
     }
 
+    function get_data_export()
+    {
+        $this->db->select('*');
+        $this->db->from('kb_po');
+        $this->db->order_by('PR_no','asc');
+
+        $query = $this->db->get();
+        return $query;
+    } 
+
 }
 
 /* End of file laporan_po_model.php */

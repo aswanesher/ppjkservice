@@ -4,6 +4,7 @@
 			<?php if($tambah=='true') { ?>
 			<a href="<?php echo base_url();?>laporan_po/laporan_po_add" class="btn-sm btn-success pull-right"><i class="ace-icon fa fa-pencil-square-o bigger-230"></i> Tambah data</a>
 			<?php } ?>
+			<a href="<?php echo base_url();?>laporan_po/export" class="btn-sm btn-danger pull-right" style="margin-right:10px;"><i class="ace-icon fa fa-save bigger-230"></i> Export data</a>
 		</h1>
 	</div><!-- /.page-header -->
 	<?php
@@ -131,7 +132,7 @@
 						?>
 							<tr>
 								<td><?php echo $a;?></td>
-								<td><?php echo $row->PO_no?></td>
+								<td><a href="<?php echo base_url();?>laporan_po/laporan_po_detail/<?php echo $row->PR_no?>"><?php echo $row->PO_no?></a></td>
 								<td><?php echo $row->PO_date?></td>
 								<td><?php echo $row->VendorName?></td>
 								<td><?php echo $row->Qty?></td>

@@ -377,6 +377,88 @@ class Laporan_po extends CI_Controller
         }
     }
 
+    function export() {
+        $obj = new PHPExcel();
+        $obj->getProperties()->setTitle("Export")->setDescription("none");
+        $obj->setActiveSheetIndex(0);
+        
+        $data = $this->laporan_po_model->get_data_export();
+        $field = $data->list_fields();
+        $col=0;
+        //foreach ($field as $f) {
+            //$fieldata=ucfirst(str_replace("_", " ", $f));
+            //echo $fieldata;
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(0,1,"PR No.");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(1,1,"PR Date");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(2,1,"PO No.");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(3,1,"PO Date");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(4,1,"Customer");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(5,1,"Vendor Code");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(6,1,"Vendor Name");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(7,1,"PO Qty");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(8,1,"Currency");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(9,1,"Rate");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(10,1,"Total PO Price");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(11,1,"Vendor Type");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(12,1,"ETD");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(13,1,"ETA Port 1");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(14,1,"ETA NS 1");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(15,1,"PO Status");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(16,1,"Item Code");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(17,1,"Item Desc");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(18,1,"Item Qty");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(19,1,"Item Price");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(20,1,"Subtotal");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(21,1,"BL No.");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(22,1,"BL Date");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(23,1,"Total BL Price");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(24,1,"BL Status");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(25,1,"ATD");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(26,1,"ETA Port 2");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(27,1,"ETA NS 2");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(28,1,"ATA Port");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(29,1,"ETA NS 3");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(30,1,"ETA NS 4");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(31,1,"ATA NS");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(32,1,"Invoice No.");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(33,1,"LC No.");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(34,1,"Estimated LC Due Date");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(35,1,"Actual LC Due Date");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(36,1,"BM");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(37,1,"Bm Amount");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(38,1,"Pph");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(39,1,"Pph Amount");
+            //$obj->getActiveSheet()->setCellValueByColumnAndRow(40,1,"Ppn");
+            //$obj->getActiveSheet()->setCellValueByColumnAndRow(41,1,"Ppn Amount");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(40,1,"Insurance");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(41,1,"Insurance Amount");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(42,1,"Estimasi PIB");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(43,1,"Actual PIB Paid");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(44,1,"Status PIB");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(45,1,"Penjaluran");
+            $obj->getActiveSheet()->setCellValueByColumnAndRow(46,1,"Payment to Vendor Status");
+            //$col++;
+        //}
+        $row =2;
+        foreach ($data->result() as $fields) {
+            $col=0;
+            foreach ($field as $value) {
+                $obj->getActiveSheet()->setCellValueByColumnAndRow($col,$row,$fields->$value);
+                $col++;
+            }
+            $row++;
+        }
+        $obj->setActiveSheetIndex(0);
+        $objw = PHPExcel_IOFactory::createWriter($obj,'Excel5');
+        
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="Laporan_PO_'.date('dMy').'.xls"');
+        header('Cache-Control: max-age=0');
+        
+        $objw->save('php://output');
+        redirect('user','refresh');
+    }
+
 
 }
 
