@@ -24,12 +24,18 @@ class Laporan_po extends CI_Controller
             if(!empty($per->is_view)&&($per->is_view=='true')) {
                 /* this is for searching */
                 $query1=$this->input->post('query1');
+                $query2=$this->input->post('query_date');
+                $query3=$this->input->post('query_status');
 
                 $param = array(
-                    'query1' => $query1
+                    'query1' => $query1,
+                    'query2' => $query2,
+                    'query3' => $query3
                 );
 
                 $data['query1'] = $query1;
+                $data['query2'] = $query2;
+                $data['query3'] = $query3;
 
                 $datas=$this->opsi_website->getdata();
 
@@ -66,7 +72,7 @@ class Laporan_po extends CI_Controller
 
                 $data['judul']=$datas->website_title;
                 $data['company']=$datas->company_name;
-                $data['judul_panel']='Pengaturan laporan_po';
+                $data['judul_panel']='Laporan PO';
                 $data['tambah']=$per->is_add;
                 $data['edit']=$per->is_edit;
                 $data['hapus']=$per->is_delete;
@@ -204,7 +210,7 @@ class Laporan_po extends CI_Controller
                  
                 //sesuaikan nama dengan nama tabel
                 $insert = $this->laporan_po_model->save_data($data);
-                delete_files($media['file_path']);        
+                //delete_files($media['file_path']);        
             }
             $this->session->set_flashdata('success', 'Data berhasil diimport!');
             redirect('laporan_po', 'refresh');

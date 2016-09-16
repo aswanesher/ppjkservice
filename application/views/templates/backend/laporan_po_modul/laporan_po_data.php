@@ -47,29 +47,28 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-8">
 									<div class="input-group">
-
+									<?php 
+									$usr=$this->session->userdata('logged_in');	
+									if($usr['group']==1) {
+									?>	
 									<span class="input-group-addon">
 									<i class="ace-icon fa fa-user"></i>
 									</span>
 									<input type="text" class="form-control search-query" placeholder="Cari nama.." value="<?php echo $query1;?>" name="query1">
+									<?php } ?>
+
+									<span class="input-group-addon">
+									<i class="ace-icon fa fa-calendar"></i>	
+									</span>
+									<input type="text" name="query_date" placeholder="Tanggal PO" class="form-control search-query" data-date-format="yyyy-mm-dd" value="<?php echo $query2;?>" data-provide="datepicker" required />
 
 									<span class="input-group-addon">
 									<i class="ace-icon fa fa-info-circle"></i>
 									</span>
-									<select class="form-control" id="form-field-select-1" name="status">
+									<select class="form-control" id="form-field-select-1" name="query_status">
 										<option value="">-- Status --</option>
-										<option value="0" <?php if($status=='0') { echo "selected"; }?>>Aktif</option>
-										<option value="1" <?php if($status=='1') { echo "selected"; }?>>Non-Aktif</option>
-									</select>
-
-									<span class="input-group-addon">
-									<i class="ace-icon fa fa-users"></i>
-									</span>
-									<select class="form-control" id="form-field-select-1" name="grup">
-										<option value="">-- Grup --</option>
-										<?php foreach ($user_type as $data) { ?>
-											<option value="<?php echo $data->id;?>" <?php if($grup==$data->id) { echo "selected"; }?>><?php echo $data->type; ?></option>
-										<?php }?>
+										<option value="open" <?php if($query3=='open') { echo 'selected';} ?>>Open</option>
+										<option value="closed" <?php if($query3=='closed') { echo 'selected'; }?>>Closed</option>
 									</select>
 
 									<span class="input-group-btn">
@@ -92,15 +91,10 @@
 			<!-- PAGE CONTENT BEGINS -->
 			<div class="row">
 				<div class="col-xs-12">
+					<div class="table-responsive">
 					<table id="simple-table" class="table table-striped table-bordered table-hover">
 						<thead>
 							<tr>
-								<th class="center">
-									<label class="pos-rel">
-										<input type="checkbox" class="ace" />
-										<span class="lbl"></span>
-									</label>
-								</th>
 								<th>#</th>
 								<th>PO</th>
 								<th>Tgl PO</th>
@@ -136,13 +130,6 @@
 						foreach ($laporan_po as $row) {
 						?>
 							<tr>
-								<td class="center">
-									<label class="pos-rel">
-										<input type="checkbox" class="ace" />
-										<span class="lbl"></span>
-									</label>
-								</td>
-
 								<td><?php echo $a;?></td>
 								<td><?php echo $row->PO_no?></td>
 								<td><?php echo $row->PO_date?></td>
@@ -225,6 +212,7 @@
 						 } ?>
 						</tbody>
 					</table>
+					</div>
 					<center><?php echo $this->pagination->create_links(); ?></center>
 				</div><!-- /.span -->
 			</div><!-- /.row -->
