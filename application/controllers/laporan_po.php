@@ -39,15 +39,24 @@ class Laporan_po extends CI_Controller
 
                 $datas=$this->opsi_website->getdata();
 
-                $data['jumlah']= $this->laporan_po_model->jumlah();
+                $dari = $this->uri->segment('3');
+
+                if($usr['group']==1) {
+                    $data['jumlah']= $this->laporan_po_model->jumlah();
+                } else {
+                    $data['jumlah']= $this->laporan_po_model->jumlah_user($usr['user']);
+                }
 
                 // Config page
                 $config['base_url'] = base_url().'/laporan_po/index';
                 $config['total_rows'] = $data['jumlah'];
                 $config['per_page'] = 20;
 
-                $dari = $this->uri->segment('3');
-                $data['laporan_po']=$this->laporan_po_model->get_dataall($param,$config['per_page'],$dari);
+                if($usr['group']==1) {
+                    $data['laporan_po']=$this->laporan_po_model->get_dataall($param,$config['per_page'],$dari);
+                } else {
+                    $data['laporan_po']=$this->laporan_po_model->get_dataall_user($param,$config['per_page'],$dari,$usr['user']);
+                }
 
                 $config['full_tag_open'] = '<ul class=pagination>';
                 $config['full_tag_close'] = '</ul>';

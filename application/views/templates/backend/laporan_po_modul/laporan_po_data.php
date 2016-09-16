@@ -169,6 +169,9 @@
 										</a>
 										<?php } ?>
 
+										<a class="btn btn-xs btn-success" href="<?php echo base_url();?>laporan_po/laporan_po_detail/<?php echo $row->PR_no?>">
+											<i class="ace-icon fa fa-eye bigger-120"></i>
+										</a>
 
 									</div>
 
@@ -216,7 +219,7 @@
 					<center><?php echo $this->pagination->create_links(); ?></center>
 				</div><!-- /.span -->
 			</div><!-- /.row -->
-			</div>
+			
 
 
 

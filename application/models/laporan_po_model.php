@@ -37,7 +37,30 @@ class Laporan_po_model extends CI_Model
         return $query->result();
     }
 
+    function get_dataall_user($param,$sampai,$dari,$user)
+    {
+        $this->db->select('*');
+        if($param['query1']!='') {
+            $this->db->like('VendorName',$param['query1']);
+        }
+        if($param['query2']!='') {
+            $this->db->where('PO_date',$param['query2']);
+        }
+        if($param['query3']!='') {
+            $this->db->where('Po_status',$param['query3']);
+        }
+        $this->db->where('Customer',$user);
+
+        $query = $this->db->get('kb_po',$sampai,$dari);
+        return $query->result();
+    }
+
     function jumlah(){
+        return $this->db->get('kb_po')->num_rows();
+    }
+
+    function jumlah_user($user){
+        $this->db->where('Customer',$user);
         return $this->db->get('kb_po')->num_rows();
     }
 
