@@ -29,7 +29,7 @@ class Backend_panel extends CI_Controller {
 		$data['judul']=$datas->website_title;
 		$data['company']=$datas->company_name;
 
-		$email=$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean');
+		$email=$this->form_validation->set_rules('email', 'Email/Username', 'trim|required|xss_clean');
 		$passwd=$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean');
 
 		$passwdnya=$this->input->post('password');

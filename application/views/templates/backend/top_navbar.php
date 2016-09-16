@@ -19,7 +19,7 @@
 				<small>
 				<?php
                 $va = $this->session->userdata('logged_in'); echo $company 
-                ?> Admin
+                ?> Member Area
 				</small>
 			</a>
 		</div>

@@ -13,8 +13,9 @@ class Opsi_website extends CI_Model {
 	public function proseslogin($username,$password) {
 		$this->db->select('kb_users.ID,kb_users.user_login,kb_users.user_type,kb_user_detail.name,kb_user_detail.user_pic');
 		$this->db->from('kb_users');
-                $this->db->join('kb_user_detail','kb_user_detail.id = kb_users.id','LEFT');
+        $this->db->join('kb_user_detail','kb_user_detail.id = kb_users.id','LEFT');
 		$this->db->where('kb_users.user_email', $username);
+		$this->db->or_where('kb_users.user_login', $username);
 		$this->db->where('kb_users.user_pass', $password);
 
 		$query = $this->db->get();

@@ -75,7 +75,7 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Email" name="email" />
+															<input type="text" class="form-control" placeholder="Email/Username" name="email" />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
