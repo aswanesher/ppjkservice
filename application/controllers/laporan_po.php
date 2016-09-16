@@ -268,6 +268,85 @@ class Laporan_po extends CI_Controller
         }
     }
 
+    public function laporan_po_detail($id)
+    {
+        $usr=$this->session->userdata('logged_in');
+        $mod=$this->permission_model->get_data_module('laporan_po');
+        $per=$this->permission_model->get_data_akses($mod->module_id,$usr['group']);
+
+        if($this->session->userdata('logged_in')) {
+            //if(!empty($per->is_edit)&&($per->is_edit=='true')) {
+                $datas=$this->opsi_website->getdata();
+
+                $dt=$this->laporan_po_model->get_data_edit($id);
+
+                /* DEFINE YOUR OWN DATA HERE */
+                $data['pr_no'] = $dt->PR_no;
+                $data['pr_date'] = $dt->PR_date;
+                $data['po_no'] = $dt->PO_no;
+                $data['po_date'] = $dt->PO_date;
+                $data['customer'] = $dt->Customer;
+                $data['vendorcode'] = $dt->VendorCode;
+                $data['vendorname'] = $dt->VendorName;
+                $data['qty'] = $dt->Qty;
+                $data['currency'] = $dt->Currency;
+                $data['rate'] = $dt->Rate;
+                $data['total_po_price'] = $dt->Total_po_price;
+                $data['vendor_type'] = $dt->Vendor_type;
+                $data['etd'] = $dt->Etd;
+                $data['eta_port1'] = $dt->Eta_port1;
+                $data['eta_ns1'] = $dt->Eta_ns1;
+                $data['po_status'] = $dt->Po_status;
+                $data['item_code'] = $dt->Item_code;
+                $data['item_desc'] = $dt->Item_desc;
+                $data['item_qty'] = $dt->Item_qty;
+                $data['item_price'] = $dt->Item_price;
+                $data['subtotal'] = $dt->Subtotal;
+                $data['bl_no'] = $dt->Bl_no;
+                $data['bl_date'] = $dt->Bl_date;
+                $data['total_bl_price'] = $dt->Total_bl_price;
+                $data['bl_status'] = $dt->Bl_status;
+                $data['atd'] = $dt->Atd;
+                $data['eta_port2'] = $dt->Eta_port2;
+                $data['eta_ns2'] = $dt->Eta_ns2;
+                $data['ata_port'] = $dt->Ata_port;
+                $data['eta_ns3'] = $dt->Eta_ns3;
+                $data['eta_ns4'] = $dt->Eta_ns4;
+                $data['ata_ns'] = $dt->Ata_ns;
+                $data['invoice_no'] = $dt->Invoice_no;
+                $data['lc_no'] = $dt->Lc_no;
+                $data['estimated_lc_due_date'] = $dt->Estimated_lc_due_date;
+                $data['actual_lc_due_date'] = $dt->Actual_lc_due_date;
+                $data['bm'] = $dt->Bm;
+                $data['bm_amount'] = $dt->Bm_amount;
+                $data['pph'] = $dt->Pph;
+                $data['pph_amount'] = $dt->Pph_amount;
+                $data['insurance'] = $dt->Insurance;
+                $data['insurance_amount'] = $dt->Insurance_amount;
+                $data['estimasi_pib_mount'] = $dt->Estimasi_pib_mount;
+                $data['actual_pib_paid'] = $dt->Actual_pib_paid;
+                $data['status_pib'] = $dt->Status_pib;
+                $data['penjaluran'] = $dt->Penjaluran;
+                $data['payment_to_vendor'] = $dt->Payment_to_vendor;
+
+                $data['judul']=$datas->website_title;
+                $data['company']=$datas->company_name;
+                $data['judul_panel']='Detail Laporan';
+
+                $view = 'templates/backend/laporan_po_modul/laporan_po_detail';
+                show($view, $data);
+            /*} else if(empty($per->is_edit)) {
+                $this->session->set_flashdata('error', 'Maaf, Anda tidak memiliki hak akses!');
+                redirect('laporan_po', 'refresh');
+            } else {
+                $this->session->set_flashdata('error', 'Maaf, Anda tidak memiliki hak akses!');
+                redirect('laporan_po', 'refresh');
+            }*/
+        } else {
+            redirect('backend_panel', 'refresh');
+        }
+    }
+
     public function laporan_po_update()
     {
         if($this->session->userdata('logged_in')) {

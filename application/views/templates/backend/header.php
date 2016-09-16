@@ -158,6 +158,15 @@
 		    });
 		});
 		jQuery(function($){
+			$('#openBtn').click(function(){
+  
+			  	$('.modal-body').load('/render/62805',function(result){
+				    $('#myModal').modal({show:true});
+				});
+			  
+				
+			});
+			
 			$("#input_title").keyup(function(event){
 				var isi = $("#input_title").val();
 				$("#input_title2").val(isi);
