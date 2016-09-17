@@ -208,13 +208,15 @@ class Laporan_po extends CI_Controller
                     "Bm_amount"=> $rowData[0][37],
                     "Pph"=> $rowData[0][38],
                     "Pph_amount"=> $rowData[0][39],
-                    "Insurance"=> $rowData[0][40],
-                    "Insurance_amount"=> $rowData[0][41],
-                    "Estimasi_pib_mount"=> $rowData[0][42],
-                    "Actual_pib_paid"=> $rowData[0][43],
-                    "Status_pib"=> $rowData[0][44],
-                    "Penjaluran"=> $rowData[0][45],
-                    "Payment_to_vendor"=> $rowData[0][46]
+                    "Ppn"=> $rowData[0][40],
+                    "Ppn_amount"=> $rowData[0][41],
+                    "Insurance"=> $rowData[0][42],
+                    "Insurance_amount"=> $rowData[0][43],
+                    "Estimasi_pib_mount"=> $rowData[0][44],
+                    "Actual_pib_paid"=> $rowData[0][45],
+                    "Status_pib"=> $rowData[0][46],
+                    "Penjaluran"=> $rowData[0][47],
+                    "Payment_to_vendor"=> $rowData[0][48]
                 );
                  
                 //sesuaikan nama dengan nama tabel
@@ -249,10 +251,59 @@ class Laporan_po extends CI_Controller
                 $dt=$this->laporan_po_model->get_data_edit($id);
 
                 /* DEFINE YOUR OWN DATA HERE */
+                $data['pr_no'] = $dt->PR_no;
+                $data['pr_date'] = $dt->PR_date;
+                $data['po_no'] = $dt->PO_no;
+                $data['po_date'] = $dt->PO_date;
+                $data['customer'] = $dt->Customer;
+                $data['vendorcode'] = $dt->VendorCode;
+                $data['vendorname'] = $dt->VendorName;
+                $data['qty'] = $dt->Qty;
+                $data['currency'] = $dt->Currency;
+                $data['rate'] = $dt->Rate;
+                $data['total_po_price'] = $dt->Total_po_price;
+                $data['vendor_type'] = $dt->Vendor_type;
+                $data['etd'] = $dt->Etd;
+                $data['eta_port1'] = $dt->Eta_port1;
+                $data['eta_ns1'] = $dt->Eta_ns1;
+                $data['po_status'] = $dt->Po_status;
+                $data['item_code'] = $dt->Item_code;
+                $data['item_desc'] = $dt->Item_desc;
+                $data['item_qty'] = $dt->Item_qty;
+                $data['item_price'] = $dt->Item_price;
+                $data['subtotal'] = $dt->Subtotal;
+                $data['bl_no'] = $dt->Bl_no;
+                $data['bl_date'] = $dt->Bl_date;
+                $data['total_bl_price'] = $dt->Total_bl_price;
+                $data['bl_status'] = $dt->Bl_status;
+                $data['atd'] = $dt->Atd;
+                $data['eta_port2'] = $dt->Eta_port2;
+                $data['eta_ns2'] = $dt->Eta_ns2;
+                $data['ata_port'] = $dt->Ata_port;
+                $data['eta_ns3'] = $dt->Eta_ns3;
+                $data['eta_ns4'] = $dt->Eta_ns4;
+                $data['ata_ns'] = $dt->Ata_ns;
+                $data['invoice_no'] = $dt->Invoice_no;
+                $data['lc_no'] = $dt->Lc_no;
+                $data['estimated_lc_due_date'] = $dt->Estimated_lc_due_date;
+                $data['actual_lc_due_date'] = $dt->Actual_lc_due_date;
+                $data['bm'] = $dt->Bm;
+                $data['bm_amount'] = $dt->Bm_amount;
+                $data['pph'] = $dt->Pph;
+                $data['pph_amount'] = $dt->Pph_amount;
+                $data['ppn'] = $dt->Ppn;
+                $data['ppn_amount'] = $dt->Ppn_amount;
+                $data['insurance'] = $dt->Insurance;
+                $data['insurance_amount'] = $dt->Insurance_amount;
+                $data['estimasi_pib_mount'] = $dt->Estimasi_pib_mount;
+                $data['actual_pib_paid'] = $dt->Actual_pib_paid;
+                $data['status_pib'] = $dt->Status_pib;
+                $data['penjaluran'] = $dt->Penjaluran;
+                $data['payment_to_vendor'] = $dt->Payment_to_vendor;
 
                 $data['judul']=$datas->website_title;
                 $data['company']=$datas->company_name;
-                $data['judul_panel']='Ubah laporan_po';
+                $data['judul_panel']='Ubah Laporan PO';
 
                 $view = 'templates/backend/laporan_po_modul/laporan_po_edit';
                 show($view, $data);
@@ -261,6 +312,75 @@ class Laporan_po extends CI_Controller
                 redirect('laporan_po', 'refresh');
             } else {
                 $this->session->set_flashdata('error', 'Maaf, Anda tidak memiliki hak akses!');
+                redirect('laporan_po', 'refresh');
+            }
+        } else {
+            redirect('backend_panel', 'refresh');
+        }
+    }
+
+
+    public function laporan_po_update()
+    {
+        if($this->session->userdata('logged_in')) {
+            /* PUT YOUR OWN PROCESS HERE */
+            $id_po = $this->input->post('PR_no');
+            $data=array(          
+                'PR_date'=>$this->input->post('PR_date'),
+                'PO_no'=>$this->input->post('PO_no'),
+                'PO_date'=>$this->input->post('PO_date'),
+                'Customer'=>$this->input->post('Customer'),
+                'VendorCode'=>$this->input->post('VendorCode'),
+                'VendorName'=>$this->input->post('VendorName'),
+                'Qty'=>$this->input->post('Qty'),
+                'Currency'=>$this->input->post('Currency'),
+                'Rate'=>$this->input->post('Rate'),
+                'Total_po_price'=>$this->input->post('Total_po_price'),
+                'Vendor_type'=>$this->input->post('Vendor_type'),
+                'Etd'=>$this->input->post('Etd'),
+                'Eta_port1'=>$this->input->post('Eta_port1'),
+                'Eta_ns1'=>$this->input->post('Eta_ns1'),
+                'Po_status'=>$this->input->post('Po_status'),
+                'Item_code'=>$this->input->post('Item_code'),
+                'Item_desc'=>$this->input->post('Item_desc'),
+                'Item_qty'=>$this->input->post('Item_qty'),
+                'Item_price'=>$this->input->post('Item_price'),
+                'Subtotal'=>$this->input->post('Subtotal'),
+                'Bl_no'=>$this->input->post('Bl_no'),
+                'Bl_date'=>$this->input->post('Bl_date'),
+                'Total_bl_price'=>$this->input->post('Total_bl_price'),
+                'Bl_status'=>$this->input->post('Bl_status'),
+                'Atd'=>$this->input->post('Atd'),
+                'Eta_port2'=>$this->input->post('Eta_port2'),
+                'Eta_ns2'=>$this->input->post('Eta_ns2'),
+                'Ata_port'=>$this->input->post('Ata_port'),
+                'Eta_ns3'=>$this->input->post('Eta_ns3'),
+                'Eta_ns4'=>$this->input->post('Eta_ns4'),
+                'Ata_ns'=>$this->input->post('Ata_ns'),
+                'Invoice_no'=>$this->input->post('Invoice_no'),
+                'Lc_no'=>$this->input->post('Lc_no'),
+                'Estimated_lc_due_date'=>$this->input->post('Estimated_lc_due_date'),
+                'Actual_lc_due_date'=>$this->input->post('Actual_lc_due_date'),
+                'Bm'=>$this->input->post('Bm'),
+                'Bm_amount'=>$this->input->post('Bm_amount'),
+                'Pph'=>$this->input->post('Pph'),
+                'Pph_amount'=>$this->input->post('Pph_amount'),
+                'Ppn'=>$this->input->post('Ppn'),
+                'Ppn_amount'=>$this->input->post('Ppn_amount'),
+                'Insurance'=>$this->input->post('Insurance'),
+                'Insurance_amount'=>$this->input->post('Insurance_amount'),
+                'Estimasi_pib_mount'=>$this->input->post('Estimasi_pib_mount'),
+                'Actual_pib_paid'=>$this->input->post('Actual_pib_paid'),
+                'Status_pib'=>$this->input->post('Status_pib'),
+                'Penjaluran'=>$this->input->post('Penjaluran'),
+                'Payment_to_vendor'=>$this->input->post('Payment_to_vendor')
+            );
+            $result=$this->laporan_po_model->update_data($id_po,$data);
+            if($result!=FALSE) {            
+                $this->session->set_flashdata('success', 'Data berhasil diubah!');
+                redirect('laporan_po', 'refresh');
+            } else {
+                $this->session->set_flashdata('error', 'Data gagal diubah!');
                 redirect('laporan_po', 'refresh');
             }
         } else {
@@ -321,6 +441,8 @@ class Laporan_po extends CI_Controller
                 $data['bm_amount'] = $dt->Bm_amount;
                 $data['pph'] = $dt->Pph;
                 $data['pph_amount'] = $dt->Pph_amount;
+                $data['ppn'] = $dt->Ppn;
+                $data['ppn_amount'] = $dt->Ppn_amount;
                 $data['insurance'] = $dt->Insurance;
                 $data['insurance_amount'] = $dt->Insurance_amount;
                 $data['estimasi_pib_mount'] = $dt->Estimasi_pib_mount;
@@ -347,15 +469,6 @@ class Laporan_po extends CI_Controller
         }
     }
 
-    public function laporan_po_update()
-    {
-        if($this->session->userdata('logged_in')) {
-            /* PUT YOUR OWN PROCESS HERE */
-        } else {
-            redirect('backend_panel', 'refresh');
-        }
-    }
-
     public function laporan_po_delete($id)
     {
         $usr=$this->session->userdata('logged_in');
@@ -365,6 +478,14 @@ class Laporan_po extends CI_Controller
         if($this->session->userdata('logged_in')) {
             if(!empty($per->is_delete)&&($per->is_delete=='true')) {
                 /* PUT YOUR OWN PROCESS HERE */
+                $result=$this->laporan_po_model->hapus($id);
+                if($result!=FALSE) {            
+                    $this->session->set_flashdata('success', 'Data berhasil dihapus!');
+                    redirect('laporan_po', 'refresh');
+                } else {
+                    $this->session->set_flashdata('error', 'Data gagal dihapus!');
+                    redirect('laporan_po', 'refresh');
+                }
             } else if(empty($per->is_delete)) {
                 $this->session->set_flashdata('error', 'Maaf, Anda tidak memiliki hak akses!');
                 redirect('laporan_po', 'refresh');

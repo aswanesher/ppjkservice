@@ -329,6 +329,22 @@
 		</div>
 
 		<div class="profile-info-row">
+			<div class="profile-info-name"> PPN </div>
+
+			<div class="profile-info-value">
+				<span class="editable" id="username"><?php echo $ppn;?></span>
+			</div>
+		</div>
+
+		<div class="profile-info-row">
+			<div class="profile-info-name"> PPN Amount </div>
+
+			<div class="profile-info-value">
+				<span class="editable" id="username"><?php echo $ppn_amount;?></span>
+			</div>
+		</div>
+
+		<div class="profile-info-row">
 			<div class="profile-info-name"> Insurance </div>
 
 			<div class="profile-info-value">
