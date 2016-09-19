@@ -80,6 +80,47 @@
 
 	<div class="row">
 		<div class="col-xs-12">
+			<div class="widget-box">
+				<div class="widget-header widget-header-small">
+					<h5 class="widget-title lighter">Tracking Pengiriman</h5>
+				</div>
+				<div class="widget-body">
+					<div class="widget-main">
+						<form class="m-t" name="myform" action="http://gps.id/main.php" method="post" target="_blank">	
+								<div class="form-group">
+									<div class="input-group m-b"><span class="input-group-addon">&nbsp;<i class="fa fa-user"></i>&nbsp;</span> 
+										<input id="RequestUserName" class="form-control" name="RequestUserName" placeholder="Username" type="text" required="">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="input-group m-b"><span class="input-group-addon">&nbsp;<i class="fa fa-lock"></i>&nbsp;</span> 
+										<input id="RequestPassword" class="form-control" name="RequestPassword" placeholder="Password" type="password" required="">
+									</div>
+								</div>
+								<input type="submit" value="LOGIN" class="btn btn-sm btn-primary btn-block full-width m-b">
+								<input name="ISLOGIN" type="hidden" value="1">
+								<input name="strCompanyName" type="hidden" value="">
+								<input type="hidden" name="RequestLanguage" value="id">
+								<input name="strKey" type="hidden" value="ABQIAAAA04jheXlsh-3HcTCx4GPK1BT7IlRBkh8uddrJZQSG8mE_fbdMVBQIHVp8Gx4xvQUmh-RJH4wDVOdsMA">
+								<div>
+								<div class="groupSeparatorWrapper">
+									<div class="groupSeparator">
+									</div>
+								</div>
+								</div>
+								
+								
+								
+								
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
 			<!-- PAGE CONTENT BEGINS -->
 			<div class="row">
 				<div class="col-xs-12">
