@@ -27,11 +27,11 @@ class Laporan_po_model extends CI_Model
             $this->db->like('VendorName',$param['query1']);
         }
         if($param['query2']!='') {
-            $this->db->where('PO_date',$param['query2']);
+            $this->db->where('PO_no',$param['query2']);
         }
-        if($param['query3']!='') {
+        /*if($param['query3']!='') {
             $this->db->where('Po_status',$param['query3']);
-        }
+        }*/
 
         $query = $this->db->get('kb_po',$sampai,$dari);
         return $query->result();
@@ -44,11 +44,11 @@ class Laporan_po_model extends CI_Model
             $this->db->like('VendorName',$param['query1']);
         }
         if($param['query2']!='') {
-            $this->db->where('PO_date',$param['query2']);
+            $this->db->where('PO_no',$param['query2']);
         }
-        if($param['query3']!='') {
+        /*if($param['query3']!='') {
             $this->db->where('Po_status',$param['query3']);
-        }
+        }*/
         $this->db->where('Customer',$user);
 
         $query = $this->db->get('kb_po',$sampai,$dari);

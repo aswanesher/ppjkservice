@@ -59,18 +59,9 @@
 									<?php } ?>
 
 									<span class="input-group-addon">
-									<i class="ace-icon fa fa-calendar"></i>	
+									<i class="ace-icon fa fa-search"></i>
 									</span>
-									<input type="text" name="query_date" placeholder="Tanggal PO" class="form-control search-query" data-date-format="yyyy-mm-dd" value="<?php echo $query2;?>" data-provide="datepicker" required />
-
-									<span class="input-group-addon">
-									<i class="ace-icon fa fa-info-circle"></i>
-									</span>
-									<select class="form-control" id="form-field-select-1" name="query_status">
-										<option value="">-- Status --</option>
-										<option value="open" <?php if($query3=='open') { echo 'selected';} ?>>Open</option>
-										<option value="closed" <?php if($query3=='closed') { echo 'selected'; }?>>Closed</option>
-									</select>
+									<input type="text" class="form-control search-query" placeholder="Cari nomor PO.." value="<?php echo $query2;?>" name="query2">
 
 									<span class="input-group-btn">
 									<button type="submit" class="btn btn-purple btn-sm">

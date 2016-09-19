@@ -24,18 +24,18 @@ class Laporan_po extends CI_Controller
             if(!empty($per->is_view)&&($per->is_view=='true')) {
                 /* this is for searching */
                 $query1=$this->input->post('query1');
-                $query2=$this->input->post('query_date');
-                $query3=$this->input->post('query_status');
+                $query2=$this->input->post('query2');
+                //$query3=$this->input->post('query_status');
 
                 $param = array(
                     'query1' => $query1,
-                    'query2' => $query2,
-                    'query3' => $query3
+                    'query2' => $query2
+                    //'query3' => $query3
                 );
 
                 $data['query1'] = $query1;
                 $data['query2'] = $query2;
-                $data['query3'] = $query3;
+                //$data['query3'] = $query3;
 
                 $datas=$this->opsi_website->getdata();
 
