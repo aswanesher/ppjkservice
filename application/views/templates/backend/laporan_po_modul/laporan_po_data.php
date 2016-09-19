@@ -80,47 +80,6 @@
 
 	<div class="row">
 		<div class="col-xs-12">
-			<div class="widget-box">
-				<div class="widget-header widget-header-small">
-					<h5 class="widget-title lighter">Tracking Pengiriman</h5>
-				</div>
-				<div class="widget-body">
-					<div class="widget-main">
-						<form class="m-t" name="myform" action="http://gps.id/main.php" method="post" target="_blank">	
-								<div class="form-group">
-									<div class="input-group m-b"><span class="input-group-addon">&nbsp;<i class="fa fa-user"></i>&nbsp;</span> 
-										<input id="RequestUserName" class="form-control" name="RequestUserName" placeholder="Username" type="text" required="">
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="input-group m-b"><span class="input-group-addon">&nbsp;<i class="fa fa-lock"></i>&nbsp;</span> 
-										<input id="RequestPassword" class="form-control" name="RequestPassword" placeholder="Password" type="password" required="">
-									</div>
-								</div>
-								<input type="submit" value="LOGIN" class="btn btn-sm btn-primary btn-block full-width m-b">
-								<input name="ISLOGIN" type="hidden" value="1">
-								<input name="strCompanyName" type="hidden" value="">
-								<input type="hidden" name="RequestLanguage" value="id">
-								<input name="strKey" type="hidden" value="ABQIAAAA04jheXlsh-3HcTCx4GPK1BT7IlRBkh8uddrJZQSG8mE_fbdMVBQIHVp8Gx4xvQUmh-RJH4wDVOdsMA">
-								<div>
-								<div class="groupSeparatorWrapper">
-									<div class="groupSeparator">
-									</div>
-								</div>
-								</div>
-								
-								
-								
-								
-							</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-xs-12">
 			<!-- PAGE CONTENT BEGINS -->
 			<div class="row">
 				<div class="col-xs-12">
@@ -206,6 +165,32 @@
 											<i class="ace-icon fa fa-eye bigger-120"></i>
 										</a>
 
+										<form class="m-t" name="myform" action="http://gps.id/main.php" method="post" target="_blank">	
+											<!--<div class="form-group">
+												<div class="input-group m-b"><span class="input-group-addon">&nbsp;<i class="fa fa-user"></i>&nbsp;</span> 
+													<input id="RequestUserName" class="form-control" name="RequestUserName" placeholder="Username" type="text" required="">
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="input-group m-b"><span class="input-group-addon">&nbsp;<i class="fa fa-lock"></i>&nbsp;</span> 
+													<input id="RequestPassword" class="form-control" name="RequestPassword" placeholder="Password" type="password" required="">
+												</div>
+											</div>-->
+											<input type="submit" value="Tracking Pengiriman" class="btn btn-sm btn-primary btn-block full-width m-b">
+											<input name="RequestUserName" type="hidden" value="edbert">
+											<input name="RequestPassword" type="hidden" value="bagus09">
+											<input name="ISLOGIN" type="hidden" value="1">
+											<input name="strCompanyName" type="hidden" value="">
+											<input type="hidden" name="RequestLanguage" value="id">
+											<input name="strKey" type="hidden" value="ABQIAAAA04jheXlsh-3HcTCx4GPK1BT7IlRBkh8uddrJZQSG8mE_fbdMVBQIHVp8Gx4xvQUmh-RJH4wDVOdsMA">
+											<div>
+											<div class="groupSeparatorWrapper">
+												<div class="groupSeparator">
+												</div>
+											</div>
+											</div>		
+										</form>
+
 									</div>
 
 									<div class="hidden-md hidden-lg">
@@ -216,28 +201,61 @@
 
 											<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
 												<li>
-													<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+													<a href="<?php echo base_url();?>laporan_po/laporan_po_detail/<?php echo $row->PR_no?>" class="tooltip-info" data-rel="tooltip" title="View">
 														<span class="blue">
 															<i class="ace-icon fa fa-search-plus bigger-120"></i>
 														</span>
 													</a>
 												</li>
 
+												<?php if($edit=='true') { ?>
 												<li>
-													<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+													<a href="<?php echo base_url();?>laporan_po/laporan_po_edit/<?php echo $row->PR_no?>" class="tooltip-success" data-rel="tooltip" title="Edit">
 														<span class="green">
 															<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
 														</span>
 													</a>
 												</li>
+												<?php } ?>
 
+												<?php if($hapus=='true') { ?>
 												<li>
-													<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+													<a href="<?php echo base_url();?>laporan_po/laporan_po_delete/<?php echo $row->PR_no?>" onclick="return confirm('Anda yakin akan menghapus user ini?')" class="tooltip-error" data-rel="tooltip" title="Delete">
 														<span class="red">
 															<i class="ace-icon fa fa-trash-o bigger-120"></i>
 														</span>
 													</a>
 												</li>
+												<?php } ?>
+
+												<li>
+													<form class="m-t" name="myform" action="http://gps.id/main.php" method="post" target="_blank">	
+											<!--<div class="form-group">
+												<div class="input-group m-b"><span class="input-group-addon">&nbsp;<i class="fa fa-user"></i>&nbsp;</span> 
+													<input id="RequestUserName" class="form-control" name="RequestUserName" placeholder="Username" type="text" required="">
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="input-group m-b"><span class="input-group-addon">&nbsp;<i class="fa fa-lock"></i>&nbsp;</span> 
+													<input id="RequestPassword" class="form-control" name="RequestPassword" placeholder="Password" type="password" required="">
+												</div>
+											</div>-->
+											<input type="submit" value="Tracking Pengiriman" class="btn btn-sm btn-primary btn-block full-width m-b">
+											<input name="RequestUserName" type="hidden" value="edbert">
+											<input name="RequestPassword" type="hidden" value="bagus09">
+											<input name="ISLOGIN" type="hidden" value="1">
+											<input name="strCompanyName" type="hidden" value="">
+											<input type="hidden" name="RequestLanguage" value="id">
+											<input name="strKey" type="hidden" value="ABQIAAAA04jheXlsh-3HcTCx4GPK1BT7IlRBkh8uddrJZQSG8mE_fbdMVBQIHVp8Gx4xvQUmh-RJH4wDVOdsMA">
+											<div>
+											<div class="groupSeparatorWrapper">
+												<div class="groupSeparator">
+												</div>
+											</div>
+											</div>		
+										</form>
+												</li>
+
 											</ul>
 										</div>
 									</div>
